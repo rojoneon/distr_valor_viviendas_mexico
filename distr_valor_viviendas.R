@@ -204,8 +204,8 @@ facet_precios <-
   facet_wrap(~entidad)+
   scale_y_continuous(labels = label_number(scale = 1/1000,
                                            suffix = "K")) 
-glimpse(datitos_final)
 
+acum_estado_grupos <-
 datitos_final %>% 
   dplyr::mutate(grupos=factor((case_when(
                       veintiles<=6 ~ 1,
